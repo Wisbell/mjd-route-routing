@@ -12,20 +12,33 @@ app.config(function($routeProvider){
         controller: "",
         templateUrl: ""
     })
+    .when('/blueridge/', {
+        controller: "BlueRidgeParkwayCtrl",
+        templateUrl: "partials/blueridgeparkway.html"
+    })
     .when('/', {
-        controller: "",
-        templateUrl: ""
+        controller: "Route66Ctrl",
+        templateUrl: "partials/route66.html"
     })
 })
 
 
 // Controllers
+
+// Homepage Controller
 app.controller('MainCtrl', function($scope){
 
 })
 
 
 
-app.controller('MainCtrl', function($scope){
+app.controller('BlueRidgeParkwayCtrl', function($scope){
+    $scope.highwayName
+    $scope.highwayDescription
+})
 
+
+app.controller('Route66Ctrl', function($scope){
+    $scope.highwayName
+    $scope.highwayDescription
 })
